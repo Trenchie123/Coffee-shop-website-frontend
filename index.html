@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Shop - Nanyuki</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'coffee-dark': '#1e140f',
+                        'menu-dark': '#18110c',
+                        'coffee-orange': '#d48c3b',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-coffee-dark text-white font-sans overflow-x-hidden">
+
+    <nav class="fixed top-0 left-0 w-full bg-coffee-dark/95 text-white py-4 px-4 md:px-16 flex justify-between items-center z-50 shadow-md transition-all duration-300">
+        <div class="flex items-center gap-2 text-xl font-bold">
+            <span class="text-2xl">☕</span> Coffee
+        </div>
+        <div class="hidden md:flex gap-8 text-sm font-medium text-gray-300">
+            <a href="#home" class="hover:text-white transition">Home</a>
+            <a href="#about" class="hover:text-white transition">About</a>
+            <a href="#menu" class="hover:text-white transition">Menu</a>
+            <a href="#testimonials" class="hover:text-white transition">Testimonials</a>
+            <a href="#gallery" class="hover:text-white transition">Gallery</a>
+            <a href="#contact" class="hover:text-white transition">Contact</a>
+        </div>
+        <button class="md:hidden text-white text-2xl focus:outline-none" onclick="toggleMobileMenu()" aria-label="Toggle Navigation Menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </nav>
+
+    <div id="mobile-menu" class="hidden fixed top-14 left-0 w-full bg-coffee-dark text-white flex flex-col gap-4 p-6 z-40 shadow-lg md:hidden border-t border-white/10">
+        <a href="#home" onclick="toggleMobileMenu()" class="hover:text-coffee-orange transition">Home</a>
+        <a href="#about" onclick="toggleMobileMenu()" class="hover:text-coffee-orange transition">About</a>
+        <a href="#menu" onclick="toggleMobileMenu()" class="hover:text-coffee-orange transition">Menu</a>
+        <a href="#testimonials" onclick="toggleMobileMenu()" class="hover:text-coffee-orange transition">Testimonials</a>
+        <a href="#gallery" onclick="toggleMobileMenu()" class="hover:text-coffee-orange transition">Gallery</a>
+        <a href="#contact" onclick="toggleMobileMenu()" class="hover:text-coffee-orange transition">Contact</a>
+    </div>
+
+    <main class="w-full">
+
+        <section id="home" class="bg-coffee-dark min-h-screen pt-24 pb-12 px-6 md:px-16 flex flex-col md:flex-row items-center justify-between text-white overflow-hidden gap-8">
+            <div class="w-full md:w-1/2 space-y-6 mt-6 md:mt-0 z-10 text-center md:text-left order-2 md:order-1">
+                <h3 class="text-coffee-orange font-semibold text-xl md:text-3xl italic">Best Coffee</h3>
+                <h1 class="text-3xl sm:text-4xl md:text-6xl font-bold leading-tight">Make your day great with our special coffee!</h1>
+                <p class="text-gray-300 text-sm md:text-base max-w-lg mx-auto md:mx-0">
+                    Welcome to our coffee paradise where every bean tells a story and every cup sparks joy.
+                </p>
+                <div class="flex gap-4 pt-2 justify-center md:justify-start">
+                    <a href="#menu" class="bg-coffee-orange hover:bg-[#bd7a2e] text-white px-6 py-3 rounded-full font-medium transition text-center shadow-lg text-sm sm:text-base">Order Now</a>
+                    <a href="#contact" class="border border-white hover:bg-white/10 text-white px-6 py-3 rounded-full font-medium transition text-center text-sm sm:text-base">Contact Us</a>
+                </div>
+            </div>
+
+            <div class="w-full md:w-1/2 flex justify-center items-center order-1 md:order-2 px-4 select-none relative" id="hero-image-wrapper">
+                <div class="relative w-full max-w-[280px] sm:max-w-[360px] md:max-w-[480px] lg:max-w-[540px] aspect-square flex items-center justify-center will-change-transform scale-100 transition-transform duration-300" id="parallax-cup">
+                    <img src="coffee-splash.png" alt="Hyper Realistic Coffee Splash" class="w-full h-full object-contain filter drop-shadow-[0_20px_30px_rgba(0,0,0,0.6)]">
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="py-20 px-6 md:px-16 bg-white flex flex-col md:flex-row items-center gap-12 text-gray-800">
+            <div class="w-full md:w-1/2 flex justify-center">
+                <div class="w-full max-w-[280px] sm:max-w-[340px] md:max-w-[400px] aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl border-4 border-amber-900/5">
+                    <img src="dp-image.jpg" alt="Enjoying Coffee in Nanyuki" class="w-full h-full object-cover">
+                </div>
+            </div>
+            <div class="w-full md:w-1/2 text-center md:text-left space-y-6">
+                <div class="inline-block border-b-2 border-coffee-orange pb-1">
+                    <span class="tracking-widest uppercase font-bold text-xs text-gray-400">Our Story</span>
+                </div>
+                <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 leading-tight">Brewing Bold Moments in the Heart of Laikipia</h2>
+                <p class="text-gray-600 text-sm md:text-base leading-relaxed">
+                    Right here in the vibrant pulse of <strong>Town Centre, Nanyuki</strong>, we blend urban refinement with the majestic, laid-back charm of the equator line. We don't just pour standard drinks; we handcraft liquid experiences meant to fuel conversations, design breakthroughs, and perfect structural layouts. 
+                </p>
+                <p class="text-gray-600 text-sm md:text-base leading-relaxed">
+                    Whether you're stopping by to capture that perfect photo presentation or settling in with your laptop to complete your latest creative build, we offer an inviting atmosphere where every guest can unwind in comfort.
+                </p>
+                <div class="flex justify-center md:justify-start gap-4 text-gray-400 pt-2">
+                    <a href="#" class="hover:text-coffee-orange text-xl transition"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="hover:text-coffee-orange text-xl transition"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <section id="menu" class="bg-menu-dark text-white py-20 px-6 md:px-16 text-center">
+            <div class="inline-block border-b-2 border-coffee-orange pb-1 mb-12">
+                <span class="tracking-widest uppercase font-bold text-sm text-gray-300">Our Menu</span>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
+                
+                <div class="bg-white/5 p-6 rounded-xl flex flex-col items-center space-y-3 hover:scale-105 transition-transform border border-white/5">
+                    <img src="latte.jpg" alt="Café Latte" class="w-24 h-24 object-cover rounded-full mb-2 border-2 border-coffee-orange">
+                    <h3 class="font-semibold text-lg">Café Latte</h3>
+                    <p class="text-xs text-gray-400 max-w-[220px]">Silky steamed milk poured over rich espresso shots with a micro-foam finish.</p>
+                </div>
+
+                <div class="bg-white/5 p-6 rounded-xl flex flex-col items-center space-y-3 hover:scale-105 transition-transform border border-white/5">
+                    <img src="Macchiato.jpg" alt="Espresso Macchiato" class="w-24 h-24 object-cover rounded-full mb-2 border-2 border-coffee-orange">
+                    <h3 class="font-semibold text-lg">Espresso Macchiato</h3>
+                    <p class="text-xs text-gray-400 max-w-[220px]">A robust shot of dark espresso marked gently with a dollop of velvety frothed milk.</p>
+                </div>
+
+                <div class="bg-white/5 p-6 rounded-xl flex flex-col items-center space-y-3 hover:scale-105 transition-transform border border-white/5">
+                    <img src="chocolate-chip.jpg" alt="Chocolate Chip Frappe" class="w-24 h-24 object-cover rounded-full mb-2 border-2 border-coffee-orange">
+                    <h3 class="font-semibold text-lg">Chocolate Chip Frappe</h3>
+                    <p class="text-xs text-gray-400 max-w-[220px]">An icy blended treat featuring rich chocolate drizzle, crisp chip crumbles, and whipped cream topping.</p>
+                </div>
+
+                <div class="bg-white/5 p-6 rounded-xl flex flex-col items-center space-y-3 hover:scale-105 transition-transform border border-white/5">
+                    <img src="Baguette.jpg" alt="Crispy French Baguette" class="w-24 h-24 object-cover rounded-full mb-2 border-2 border-coffee-orange" onerror="this.src='Baguette.png'">
+                    <h3 class="font-semibold text-lg">French Baguette</h3>
+                    <p class="text-xs text-gray-400 max-w-[220px]">Freshly baked golden crust crust baguette with a soft, warm and pillowy crumb inside.</p>
+                </div>
+
+
+                <div class="bg-white/5 p-6 rounded-xl flex flex-col items-center space-y-3 hover:scale-105 transition-transform border border-white/5">
+                    <img src="Burger.jpg" alt="Gourmet House Burger" class="w-24 h-24 object-cover rounded-full mb-2 border-2 border-coffee-orange" onerror="this.src='Burger.png'">
+                    <h3 class="font-semibold text-lg">Gourmet Burger</h3>
+                    <p class="text-xs text-gray-400 max-w-[220px]">Flame-grilled premium savory patty paired with melted cheese, crisp greens, and house sauce.</p>
+                </div>
+
+                <div class="bg-white/5 p-6 rounded-xl flex flex-col items-center space-y-3 hover:scale-105 transition-transform border border-white/5">
+                    <img src="muffin.jpg" alt="Classic Bakery Muffin" class="w-24 h-24 object-cover rounded-full mb-2 border-2 border-coffee-orange" onerror="this.src='muffin.png'">
+                    <h3 class="font-semibold text-lg">Classic Muffin</h3>
+                    <p class="text-xs text-gray-400 max-w-[220px]">A golden-baked traditional sweet breakfast muffin, perfectly pairing with hot coffee drinks.</p>
+                </div>
+
+                <div class="bg-white/5 p-6 rounded-xl flex flex-col items-center space-y-3 hover:scale-105 transition-transform border border-white/5">
+                    <img src="veggie-sandwitch.jpg" alt="Fresh Veggie Sandwich" class="w-24 h-24 object-cover rounded-full mb-2 border-2 border-coffee-orange" onerror="this.src='veggie-sandwitch.png'">
+                    <h3 class="font-semibold text-lg">Veggie Sandwich</h3>
+                    <p class="text-xs text-gray-400 max-w-[220px]">Crisp fresh cucumbers, garden tomatoes, creamy avocado, and mixed greens on toasted whole wheat.</p>
+                </div>
+
+                <div class="bg-white/5 p-6 rounded-xl flex flex-col items-center space-y-3 hover:scale-105 transition-transform border border-white/5">
+                    <img src="sandwitch.jpg" alt="Signature Toast Sandwitch" class="w-24 h-24 object-cover rounded-full mb-2 border-2 border-coffee-orange" onerror="this.src='sandwitch.png'">
+                    <h3 class="font-semibold text-lg">Signature Sandwich</h3>
+                    <p class="text-xs text-gray-400 max-w-[220px]">Toasted golden-brown bread layers packed with premium savory fillings and melted artisan cheese.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="testimonials" class="py-20 px-4 md:px-16 bg-[#faf5f2] text-center text-gray-800">
+            <div class="inline-block border-b-2 border-coffee-orange pb-1 mb-12">
+                <span class="tracking-widest uppercase font-bold text-sm text-gray-500">Testimonial</span>
+            </div>
+            <div class="max-w-4xl mx-auto flex items-center justify-between relative">
+                <button onclick="prevSlide()" class="text-coffee-orange hover:text-[#bd7a2e] text-2xl p-2 z-10 focus:outline-none" aria-label="Previous Testimonial">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full px-2 sm:px-8 overflow-x-hidden" id="slider-container">
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-orange-50">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=150" alt="Sarah" class="w-16 h-16 rounded-full mx-auto object-cover border-2 border-coffee-orange">
+                        <h4 class="font-semibold text-gray-800 text-sm mt-2">Sarah Johnson</h4>
+                        <p class="text-xs text-gray-500 italic mt-1">"Loved the French roast. Perfectly balanced and rich."</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-orange-50">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=150" alt="James" class="w-16 h-16 rounded-full mx-auto object-cover border-2 border-coffee-orange">
+                        <h4 class="font-semibold text-gray-800 text-sm mt-2">James Wilson</h4>
+                        <p class="text-xs text-gray-500 italic mt-1">"Great espresso blend! Smooth and rich flavor."</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-orange-50">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=150" alt="Michael" class="w-16 h-16 rounded-full mx-auto object-cover border-2 border-coffee-orange">
+                        <h4 class="font-semibold text-gray-800 text-sm mt-2">Michael Brown</h4>
+                        <p class="text-xs text-gray-500 italic mt-1">"Fantastic mocha flavor. Fresh and aromatic."</p>
+                    </div>
+                </div>
+                <button onclick="nextSlide()" class="text-coffee-orange hover:text-[#bd7a2e] text-2xl p-2 z-10 focus:outline-none" aria-label="Next Testimonial">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+        </section>
+
+        <section id="gallery" class="py-20 px-6 md:px-16 bg-white text-center text-gray-800">
+            <div class="inline-block border-b-2 border-coffee-orange pb-1 mb-12">
+                <span class="tracking-widest uppercase font-bold text-sm text-gray-500">Gallery</span>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 max-w-5xl mx-auto">
+                <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?q=80&w=300" alt="Gallery 1" class="w-full h-48 object-cover rounded-lg shadow-sm">
+                <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=300" alt="Gallery 2" class="w-full h-48 object-cover rounded-lg shadow-sm">
+                <img src="https://images.unsplash.com/photo-1506372023823-741c83b836fe?q=80&w=300" alt="Gallery 3" class="w-full h-48 object-cover rounded-lg shadow-sm">
+                <img src="coffe-maker.jpg" alt="Artisanal Brew Process" class="w-full h-48 object-cover rounded-lg shadow-sm hover:scale-[1.03] transition-transform duration-300">
+                <img src="falling-bean.jpg" alt="Premium Roasted Coffee Beans" class="w-full h-48 object-cover rounded-lg shadow-sm hover:scale-[1.03] transition-transform duration-300">
+            </div>
+        </section>
+
+        <section id="contact" class="py-20 px-6 md:px-16 bg-[#faf5f2] text-gray-700">
+            <div class="max-w-5xl mx-auto text-center mb-12">
+                <div class="inline-block border-b-2 border-coffee-orange pb-1">
+                    <span class="tracking-widest uppercase font-bold text-sm text-gray-500">Contact Us</span>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto items-start">
+                <div class="space-y-4 text-sm text-gray-600 text-center md:text-left">
+                    <p><i class="fa-solid fa-location-dot text-coffee-orange mr-2"></i> Town Centre, Nanyuki, Kenya</p>
+                    <p><i class="fa-solid fa-envelope text-coffee-orange mr-2"></i> info@coffeehousenanyuki.com</p>
+                    <p><i class="fa-solid fa-phone text-coffee-orange mr-2"></i> +254 700 000000</p>
+                </div>
+                <form onsubmit="handleSubmit(event)" class="space-y-4">
+                    <input type="text" placeholder="Your Name" required class="w-full p-3 rounded-md border text-sm focus:outline-none focus:border-coffee-orange">
+                    <input type="email" placeholder="Your Email" required class="w-full p-3 rounded-md border text-sm focus:outline-none focus:border-coffee-orange">
+                    <textarea placeholder="Your Message" rows="4" required class="w-full p-3 rounded-md border text-sm focus:outline-none focus:border-coffee-orange"></textarea>
+                    <button type="submit" class="w-full md:w-auto bg-coffee-dark hover:bg-black text-white px-6 py-2.5 rounded text-sm font-medium uppercase transition shadow">Submit</button>
+                </form>
+            </div>
+        </section>
+
+        <footer class="bg-coffee-dark text-gray-400 text-xs py-6 px-6 md:px-16 flex flex-col sm:flex-row justify-between items-center gap-4 w-full border-t border-white/5">
+            <div>&copy; 2026 Coffee Shop. All rights reserved.</div>
+            <div class="flex gap-4 text-base">
+                <a href="#" class="hover:text-white transition"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" class="hover:text-white transition"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

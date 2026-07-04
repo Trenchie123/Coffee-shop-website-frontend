@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --coffee-dark: #1e140f;
+    --menu-dark: #18110c;
+    --coffee-orange: #d48c3b;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #1e140f;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, .font-cursive {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+/* Custom Color Utilities */
+.bg-coffee-dark { background-color: #1e140f; }
+.bg-menu-dark { background-color: #18110c; }
+.text-coffee-orange { color: #d48c3b; }
+.bg-coffee-orange { background-color: #d48c3b; }
+.border-coffee-orange { border-color: #d48c3b; }
+
+/* 🌟 Responsive Scroll Padding */
+/* Prevents the fixed top navigation bar from overlapping content sections when scrolling down */
+section {
+  scroll-margin-top: 4.5rem;
+}
+
+/* 🚀 3D Hero Parallax & Scale Bounds */
+#hero-image-wrapper {
+  perspective: 1200px;
+  -webkit-perspective: 1200px;
+}
+
+#parallax-cup {
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  /* Will-change hints optimization properties to the browser GPU for flawless resizing/tilting */
+  will-change: transform;
+  transition: transform 0.2s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* 📱 Mobile Resolution Fixes */
+/* Ensures high-density display images scale sharply without causing unexpected layout shifting */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Smooth horizontal scrollbar suppression for the testimonial container grid */
+#slider-container {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+}
+#slider-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, and Opera */
+}
