@@ -1,20 +1,20 @@
-☕ The Daily Grind | Modern Coffee Shop Website
-Welcome to the repository for The Daily Grind, a sleek, responsive, and interactive frontend website designed for a modern coffee shop. This project blends a clean aesthetic with smooth user interactions to bring the cozy, premium vibe of a local café straight to the browser.
+# ☕ The Daily Grind | Modern Coffee Shop Website
 
-✨ Features
-Immersive Hero Section: A bold, welcoming landing page that instantly captures the café's aesthetic.
+A sleek, responsive, and interactive frontend website designed for a modern coffee shop. This project blends a clean aesthetic with smooth user interactions to bring the cozy, premium vibe of a local café straight to the browser.
 
-Interactive Menu: A beautifully formatted, dynamic digital menu showcasing seasonal brews, pastries, and specialty drinks.
+[View Live Demo](https://your-username.github.io/your-repo-name) • [Report Bug](https://github.com/your-username/your-repo-name/issues)
 
-Fully Responsive: Optimized for a seamless experience across all devices—from desktop monitors to mobile screens.
+---
 
-Smooth Animations: Subtle hover effects and transitions that elevate the overall user experience.
+## ✨ Features
 
-About & Story Section: A dedicated space highlighting the shop's origin, bean sourcing, and community mission.
+*   **📱 Fully Responsive:** Optimized for a seamless experience across all devices—from desktop monitors to mobile screens.
+*   **📖 Interactive Menu:** A beautifully formatted digital menu showcasing seasonal brews, pastries, and specialty drinks.
+*   **🎨 Modern UI/UX:** Clean design layouts featuring smooth hover animations and transition effects.
+*   **📍 Contact & Location:** Integrated sections for operating hours, store location, and a contact form.
 
-🛠️ Tech Stack
-HTML5: Semantic structure for optimal accessibility and SEO.
+## 🛠️ Tech Stack
 
-CSS3: Custom layouts utilizing Flexbox and Grid, paired with modern UI styling.
-
-JavaScript (ES6+): Powers the interactive components, smooth scrolling, and mobile navigation toggle.
+*   **HTML5** - Semantic structure for accessibility and SEO.
+*   **CSS3** - Custom layouts utilizing Flexbox and Grid, paired with modern UI styling.
+*   **JavaScript (ES6+)** - Powers interactive components, mobile navigation, and dynamic menu updates.
